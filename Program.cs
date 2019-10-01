@@ -17,17 +17,13 @@ namespace ExternalAssemblyReflector
         static void Main(string[] args)
         {
             Console.WriteLine("***** External Assembly Viewer *****");
-
-            string asmName = "";
-            Assembly asm = null;
-
             do
             {
                 Console.WriteLine("\nEnter an assembly to evaluate");
                 Console.Write("or enter Q to quit: ");
 
                 // Get name of assembly.
-                asmName = Console.ReadLine();
+                string asmName = Console.ReadLine();
 
                 // Does user want to quit?
                 if (asmName.Equals("Q", StringComparison.OrdinalIgnoreCase))
@@ -35,7 +31,7 @@ namespace ExternalAssemblyReflector
                 // Try to load assembly.
                 try
                 {
-                    asm = Assembly.Load(asmName);
+                    Assembly asm = Assembly.Load(asmName);
                     DisplayTypesInAsm(asm);
                 }
                 catch

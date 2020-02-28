@@ -14,7 +14,7 @@ namespace ExternalAssemblyReflector
                 Console.WriteLine("Type: {0}", t);
             Console.WriteLine();
         }
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("***** External Assembly Viewer *****");
             do
